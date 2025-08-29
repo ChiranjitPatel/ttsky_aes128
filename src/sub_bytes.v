@@ -1,4 +1,4 @@
-module sub_bytes (
+module tt_um_sub_bytes (
     input [7:0] in_data,    // 128-bit input
     output [7:0] out_data   // 128-bit output
 );
