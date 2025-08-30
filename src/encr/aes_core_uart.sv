@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module aes_core_uart 
+module tt_um_aes_core_uart 
 	#(  
 		parameter N = 128,
 		parameter M = 9,

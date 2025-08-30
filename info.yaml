@@ -18,8 +18,21 @@ project:
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "project.v"
-    - "tt_um_sub_bytes.v"
-    - "sbox.v"
+    - "add_round_key_encr.v"
+    - "aes_key_expansion.v"
+    - "mix_columns.v"
+    - "shiftrows.v"
+    - "sub_bytes.v"
+    - "aes_core_uart.v"
+    - "encryption_block.v"
+    - "encryption_sub_block1.v"
+    - "encryption_sub_block2.v"
+    - "uart_rx.v"
+    - "uart_tx.v"
+    - "uart_rx_tx.v"
+    
+    # - "tt_um_sub_bytes.v"
+    # - "sbox.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).

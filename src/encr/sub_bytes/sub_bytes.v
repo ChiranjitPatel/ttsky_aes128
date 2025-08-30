@@ -6,7 +6,7 @@ module sub_bytes (
 
     // Initialize the S-box from a hex file
     initial begin
-        $readmemh("C:/Users/ADMIN/Documents/GitHub/Advanced_Encryption_Std/encryption_9r/encryption_9r.srcs/sources_1/new/sub_bytes/sbox.hex", sbox); // Point to your regular S-box file
+        $readmemh("src/sub_bytes/sbox.hex", sbox); // Point to your regular S-box file
     end
 
     // Apply the S-box transformation to each byte of the input
