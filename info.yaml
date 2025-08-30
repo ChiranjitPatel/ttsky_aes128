@@ -19,10 +19,10 @@ project:
   source_files:
     - "project.v"
     - "encr/add_round_key/add_round_key_encr.v"
-    - "aes_key_expansion.v"
-    - "mix_columns.v"
-    - "shiftrows.v"
-    - "sub_bytes.v"
+    - "encr/add_round_key/aes_key_expansion.v"
+    - "encr/mix_cols/mix_columns.v"
+    - "encr/shift_rows/shiftrows.v"
+    - "encr/sub_bytes/sub_bytes.v"
     - "aes_core_uart.v"
     - "encryption_block.v"
     - "encryption_sub_block1.v"
@@ -30,6 +30,7 @@ project:
     - "uart_rx.v"
     - "uart_tx.v"
     - "uart_rx_tx.v"
+    - "sbox.v"
     
     # - "tt_um_sub_bytes.v"
     # - "sbox.v"
