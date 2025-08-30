@@ -59,12 +59,12 @@ module tt_um_aes_core_uart
 	typedef enum logic[2:0] {Init, Key_Rx_Frames, Rx_Frames, Delay, Tx_Data, Tx_Delay, Finish} state_machine;
     state_machine state;
 	
-	// Instantiate clock Wizard
-	clk_wiz_0 clk_wiz_inst (
-        .clk_out1(uart_clock_50M),
-        .reset(1'b0),
-        .clk_in1(clk)
-    );
+	// // Instantiate clock Wizard
+	// clk_wiz_0 clk_wiz_inst (
+        // .clk_out1(uart_clock_50M),
+        // .reset(1'b0),
+        // .clk_in1(clk)
+    // );
 
 	
 	// Instantiate the uart_rx_tx module
@@ -72,8 +72,8 @@ module tt_um_aes_core_uart
         .BAUD_RATE(BAUD_RATE),
         .CLOCK_FREQ(CLOCK_FREQ)
     ) uut1 (
-        .clk_10ns(clk),
-        .uart_clock(uart_clock_50M),
+        // .clk_10ns(clk),
+        .uart_clock(clk),
         .uart_reset(reset),
         .uart_transmit_data(uart_transmit_data),
         .uart_rx_d_in(uart_rx),

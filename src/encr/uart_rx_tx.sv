@@ -4,7 +4,8 @@ module uart_rx_tx
 	#(  parameter [23:0] BAUD_RATE = 24'd4000000,
 		parameter [27:0] CLOCK_FREQ = 28'd50000000
 	)
-	(	clk_10ns,
+	(	
+		// clk_10ns,
 		uart_clock,
 		uart_reset,
 		uart_transmit_data,
@@ -17,7 +18,7 @@ module uart_rx_tx
 	);
 	
 	
-	input  logic clk_10ns;
+	// input  logic clk_10ns;
 	input  logic uart_clock;
 	input  logic uart_reset;
 	input  logic [7:0] uart_transmit_data;
