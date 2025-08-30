@@ -27,9 +27,9 @@ project:
     - "encr/encryption_block.v"
     - "encr/encryption_sub_block1.v"
     - "encr/encryption_sub_block2.v"
-    - "encr/uart_rx.v"
-    - "encr/uart_tx.v"
-    - "encr/uart_rx_tx.v"
+    - "encr/uart_rx.sv"
+    - "encr/uart_tx.sv"
+    - "encr/uart_rx_tx.sv"
     - "encr/sbox.v"
     
     # - "tt_um_sub_bytes.v"
