@@ -15,9 +15,8 @@ module tt_um_example (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
-  tt_um_sub_bytes uut1 (.in_data(ui_in), .out_data(ui_out));
+  tt_um_sub_bytes uut1 (.in_data(ui_in), .out_data(uo_out));
   // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
   assign uio_out = 0;
   assign uio_oe  = 0;
 
