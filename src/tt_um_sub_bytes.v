@@ -6,7 +6,8 @@ module tt_um_sub_bytes (
 
     // Initialize the S-box from a hex file
     initial begin
-        $readmemh("D:/Github/ttsky_aes128/src/sbox.hex", sbox); // Point to your regular S-box file
+        // $readmemh("D:/Github/ttsky_aes128/src/sbox.hex", sbox); // Point to your regular S-box file
+        $readmemh("src/sbox.hex", sbox); // Point to your regular S-box file
     end
 
     // Apply the S-box transformation to each byte of the input
