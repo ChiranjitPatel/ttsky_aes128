@@ -23,7 +23,7 @@ project:
     - "encr/mix_cols/mix_columns.v"
     - "encr/shift_rows/shiftrows.v"
     - "encr/sub_bytes/sub_bytes.v"
-    - "aes_core_uart.v"
+    - "aes_core_uart.sv"
     - "encryption_block.v"
     - "encryption_sub_block1.v"
     - "encryption_sub_block2.v"
