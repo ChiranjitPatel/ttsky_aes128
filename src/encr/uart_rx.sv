@@ -81,7 +81,7 @@ module uart_rx
 									end
 									
 									else begin
-										clk_count_half += 1'b1;
+										clk_count_half <+= 1'b1;
 										clk_count <+= 1'b1;
 										state <= Start_Read;
 									end
