@@ -81,8 +81,8 @@ module uart_rx
 									end
 									
 									else begin
-										clk_count_half <+= 1'b1;
-										clk_count <+= 1'b1;
+										clk_count_half <= clk_count_half + 1'b1;
+										clk_count <= clk_count + 1'b1;
 										state <= Start_Read;
 									end
 								end
@@ -94,12 +94,12 @@ module uart_rx
 									end
 									else if (clk_count == pulse_duration-1'b1) begin
 										clk_count <= 24'b0;
-										total_count	<+= 1'b1;
+										total_count	<= total_count + 1'b1;
 										data_buffer <= {uart_d_in, data_buffer[9:1]}; 
 										state <= Start_Read;
 									end
 									else begin
-										clk_count <+= 1'b1;
+										clk_count <= clk_count + 1'b1;
 										state <= Read_Data;
 									end
 								end
