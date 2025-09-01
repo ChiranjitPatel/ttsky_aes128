@@ -105,7 +105,7 @@ module uart_tx
 										bit_count <= 4'b0;
 									end
 									else 
-										state = Shift_Data;
+										state <= Shift_Data;
 								end
 								
 				default		:	state <= Init;
