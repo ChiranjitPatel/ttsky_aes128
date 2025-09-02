@@ -139,7 +139,7 @@ module tt_um_aes_core_uart
 		secret_key[119:112] = key_frames[14]; 
 		secret_key[127:120] = key_frames[15]; 
 	end
-	
+	integer j;
 	always_ff @(posedge clk or negedge reset) begin
 	
 		if (~reset) begin
