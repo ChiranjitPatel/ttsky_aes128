@@ -168,8 +168,12 @@ module tt_um_aes_core_uart
 										if (aes_enable) 
 											state <= Key_Rx_Frames;
 										else begin
-											key_frames <= '{NUM_FRAMES{8'h00}};
-											rx_frames <= '{NUM_FRAMES{8'h00}};
+											// key_frames <= '{NUM_FRAMES{8'h00}};
+											// rx_frames <= '{NUM_FRAMES{8'h00}};
+											for (j = 0; j < NUM_FRAMES; j = j + 1) begin
+												key_frames[j] <= 8'h00;
+												rx_frames[j] <= 8'h00;
+											end
 											state <= Init;
 										end
 									end
