@@ -1,3 +1,21 @@
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+// Company:			NUS/INTEL
+// Engineer:		Vivek Adi & Chiranjit Patel 
+// 
+// Creation Date: 	(c) 2024 NUS
+// Design Name:		System Verilog Logic of UART-Protocol Receiver 
+// Module Name: 	tt_um_aes_core_uart
+// Project Name: 	AES128
+// Tool Versions: 	AMD Vivado 2024.1
+// Description: 	
+// Dependencies: 	
+// Revision:		Revision 0.01 - File Created
+// Comments:
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+
+// `timescale 1ns/1ps
+
 module tt_um_aes_core_uart 
   #(  
     parameter N = 128,
