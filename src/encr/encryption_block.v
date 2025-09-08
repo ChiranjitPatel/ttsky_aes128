@@ -1,4 +1,4 @@
-module encryption_block #(parameter N=128, parameter M=9) 
+module encryption_block #(parameter N=128, parameter M=1) 
 (
 	clk,
 	encr_planetext_input,
