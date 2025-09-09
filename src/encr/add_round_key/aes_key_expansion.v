@@ -72,56 +72,108 @@ w43 = w39 ^ w42;
 
 end
 
+// assign out_data[7:0]    = sbox[in_data[7:0]];
 
-sbox u0(w3[23:16], subword[31:24]);  // Byte 2 (w3[23:16]) -> Byte 1 (subword[31:24])
-sbox u1(w3[15:8], subword[23:16]);   // Byte 3 (w3[15:8]) -> Byte 2 (subword[23:16])
-sbox u2(w3[7:0], subword[15:8]);     // Byte 4 (w3[7:0]) -> Byte 3 (subword[15:8])
-sbox u3(w3[31:24], subword[7:0]);    // Byte 1 (w3[31:24]) -> Byte 4 (subword[7:0])  
+// sbox u0(w3[23:16], subword[31:24]);  // Byte 2 (w3[23:16]) -> Byte 1 (subword[31:24])
+// sbox u1(w3[15:8], subword[23:16]);   // Byte 3 (w3[15:8]) -> Byte 2 (subword[23:16])
+// sbox u2(w3[7:0], subword[15:8]);     // Byte 4 (w3[7:0]) -> Byte 3 (subword[15:8])
+// sbox u3(w3[31:24], subword[7:0]);    // Byte 1 (w3[31:24]) -> Byte 4 (subword[7:0])  
 
-sbox u4(w7[23:16], subword2[31:24]); 
-sbox u5(w7[15:8], subword2[23:16]); 
-sbox u6(w7[7:0], subword2[15:8]);   
-sbox u7(w7[31:24], subword2[7:0]);    
+// sbox u4(w7[23:16], subword2[31:24]); 
+// sbox u5(w7[15:8], subword2[23:16]); 
+// sbox u6(w7[7:0], subword2[15:8]);   
+// sbox u7(w7[31:24], subword2[7:0]);    
 
-sbox u8(w11[23:16], subword3[31:24]); 
-sbox u9(w11[15:8], subword3[23:16]); 
-sbox u10(w11[7:0], subword3[15:8]);  
-sbox u11(w11[31:24], subword3[7:0]);    
+// sbox u8(w11[23:16], subword3[31:24]); 
+// sbox u9(w11[15:8], subword3[23:16]); 
+// sbox u10(w11[7:0], subword3[15:8]);  
+// sbox u11(w11[31:24], subword3[7:0]);    
 
-sbox u12(w15[23:16], subword4[31:24]); 
-sbox u13(w15[15:8], subword4[23:16]); 
-sbox u14(w15[7:0], subword4[15:8]);  
-sbox u15(w15[31:24], subword4[7:0]);    
+// sbox u12(w15[23:16], subword4[31:24]); 
+// sbox u13(w15[15:8], subword4[23:16]); 
+// sbox u14(w15[7:0], subword4[15:8]);  
+// sbox u15(w15[31:24], subword4[7:0]);    
 
-sbox u16(w19[23:16], subword5[31:24]);
-sbox u17(w19[15:8], subword5[23:16]); 
-sbox u18(w19[7:0], subword5[15:8]);  
-sbox u19(w19[31:24], subword5[7:0]);  
+// sbox u16(w19[23:16], subword5[31:24]);
+// sbox u17(w19[15:8], subword5[23:16]); 
+// sbox u18(w19[7:0], subword5[15:8]);  
+// sbox u19(w19[31:24], subword5[7:0]);  
 
-sbox u20(w23[23:16], subword6[31:24]); 
-sbox u21(w23[15:8], subword6[23:16]); 
-sbox u22(w23[7:0], subword6[15:8]);  
-sbox u23(w23[31:24], subword6[7:0]);    
+// sbox u20(w23[23:16], subword6[31:24]); 
+// sbox u21(w23[15:8], subword6[23:16]); 
+// sbox u22(w23[7:0], subword6[15:8]);  
+// sbox u23(w23[31:24], subword6[7:0]);    
 
-sbox u24(w27[23:16], subword7[31:24]);
-sbox u25(w27[15:8], subword7[23:16]); 
-sbox u26(w27[7:0], subword7[15:8]);   
-sbox u27(w27[31:24], subword7[7:0]);     
+// sbox u24(w27[23:16], subword7[31:24]);
+// sbox u25(w27[15:8], subword7[23:16]); 
+// sbox u26(w27[7:0], subword7[15:8]);   
+// sbox u27(w27[31:24], subword7[7:0]);     
 
-sbox u28(w31[23:16], subword8[31:24]);
-sbox u29(w31[15:8], subword8[23:16]); 
-sbox u30(w31[7:0], subword8[15:8]);   
-sbox u31(w31[31:24], subword8[7:0]);    
+// sbox u28(w31[23:16], subword8[31:24]);
+// sbox u29(w31[15:8], subword8[23:16]); 
+// sbox u30(w31[7:0], subword8[15:8]);   
+// sbox u31(w31[31:24], subword8[7:0]);    
 
-sbox u32(w35[23:16], subword9[31:24]); 
-sbox u33(w35[15:8], subword9[23:16]); 
-sbox u34(w35[7:0], subword9[15:8]); 
-sbox u35(w35[31:24], subword9[7:0]);   
+// sbox u32(w35[23:16], subword9[31:24]); 
+// sbox u33(w35[15:8], subword9[23:16]); 
+// sbox u34(w35[7:0], subword9[15:8]); 
+// sbox u35(w35[31:24], subword9[7:0]);   
 
-sbox u36(w39[23:16], subword10[31:24]); 
-sbox u37(w39[15:8], subword10[23:16]); 
-sbox u38(w39[7:0], subword10[15:8]);   
-sbox u39(w39[31:24], subword10[7:0]);     
+// sbox u36(w39[23:16], subword10[31:24]); 
+// sbox u37(w39[15:8], subword10[23:16]); 
+// sbox u38(w39[7:0], subword10[15:8]);   
+// sbox u39(w39[31:24], subword10[7:0]);     
+
+assign w3[23:16] = sbox[subword[31:24]];  
+assign w3[15:8] = sbox[subword[23:16]]; 
+assign w3[7:0] = sbox[subword[15:8]];     
+assign w3[31:24] = sbox[subword[7:0]];  
+ 
+assign w7[23:16] = sbox[subword2[31:24]]; 
+assign w7[15:8] = sbox[subword2[23:16]]; 
+assign w7[7:0] = sbox[subword2[15:8]];   
+assign w7[31:24] = sbox[subword2[7:0]];    
+ 
+assign w11[23:16] = sbox[subword3[31:24]]; 
+assign w11[15:8] = sbox[subword3[23:16]]; 
+assign w11[7:0] = sbox[subword3[15:8]];  
+assign w11[31:24] = sbox[subword3[7:0]];    
+ 
+assign w15[23:16] = sbox[subword4[31:24]]; 
+assign w15[15:8] = sbox[subword4[23:16]]; 
+assign w15[7:0] = sbox[subword4[15:8]];  
+assign w15[31:24] = sbox[subword4[7:0]];    
+ 
+assign w19[23:16] = sbox[subword5[31:24]];
+assign w19[15:8] = sbox[subword5[23:16]]; 
+assign w19[7:0] = sbox[subword5[15:8]];  
+assign w19[31:24] = sbox[subword5[7:0]];  
+ 
+assign w23[23:16] = sbox[subword6[31:24]]; 
+assign w23[15:8] = sbox[subword6[23:16]]; 
+assign w23[7:0] = sbox[subword6[15:8]];  
+assign w23[31:24] = sbox[subword6[7:0]];    
+ 
+assign w27[23:16] = sbox[subword7[31:24]];
+assign w27[15:8] = sbox[subword7[23:16]]; 
+assign w27[7:0] = sbox[subword7[15:8]];   
+assign w27[31:24] = sbox[subword7[7:0]];     
+ 
+assign w31[23:16] = sbox[subword8[31:24]];
+assign w31[15:8] = sbox[subword8[23:16]]; 
+assign w31[7:0] = sbox[subword8[15:8]];   
+assign w31[31:24] = sbox[subword8[7:0]];    
+ 
+assign w35[23:16] = sbox[subword9[31:24]]; 
+assign w35[15:8] = sbox[subword9[23:16]]; 
+assign w35[7:0] = sbox[subword9[15:8]]; 
+assign w35[31:24] = sbox[subword9[7:0]];   
+ 
+assign w39[23:16] = sbox[subword10[31:24]]; 
+assign w39[15:8] = sbox[subword10[23:16]]; 
+assign w39[7:0] = sbox[subword10[15:8]];   
+assign w39[31:24] = sbox[subword10[7:0]]; 
+
 
 assign key_array[127:0]={w0,w1,w2,w3};
 assign key_array[255:128]={w4,w5,w6,w7};
