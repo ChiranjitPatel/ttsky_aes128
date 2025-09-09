@@ -7,6 +7,12 @@ reg	[31:0]	w0,w1,w2,w3, w4, w5, w6, w7, w8, w9, w10, w11, w12, w13, w14, w15, w1
 							w34, w35, w36, w37, w38, w39, w40, w41, w42, w43;
 wire	[31:0]	subword, subword2,subword3,subword4,subword5, subword6, subword7,subword8,subword9,subword10;			
 
+reg [7:0] sbox [0:255]; // Declare the S-box as a 256-entry array
+
+// Initialize the S-box from a hex file
+initial begin
+    $readmemh("src/encr/sub_bytes/sbox.hex", sbox); // Point to your regular S-box file
+end
 
 always @*
 begin
